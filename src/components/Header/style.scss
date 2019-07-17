@@ -1,0 +1,53 @@
+.header {
+  background-image: linear-gradient(to bottom, rgba(22, 22, 22, 4.3) 0, rgba(255, 255, 255, -1) 48.4%),
+    url(../../images/food2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 60rem;
+}
+
+
+.welcome {
+  background: rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+  color: white;
+  width: 48%;
+  margin: 0 auto;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.welcome-container {
+  padding-top: 17.8em;
+}
+// * {
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+// }
+
+@media(max-width: 600px){
+  .welcome {
+    width: 80%;
+  }
+}
+
+@media(max-width: 400px){
+  .welcome {
+    width: 90%;
+  }
+}
+
+@media(max-width: 260px){
+  .welcome {
+    font-size: 2.9em;
+  }
+}
+
