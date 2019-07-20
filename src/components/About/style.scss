@@ -1,13 +1,18 @@
 .about {
   background-image: url(../../images/food3.png);
-  background-position-x: -15.1em;
-  background-position-y: 5em;
-  background-size: 40.3em;
+  background-position-x: -15.2em;
+  background-position-y: 9em;
+  background-size: 48.3em;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  padding: 10em 0;
+  padding: 30em 0;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
+
 
 .about-us > img {
   filter: none;
@@ -16,13 +21,14 @@
 
 .about-us {
   max-width: 1200px;
-  margin-left: 24em;
-  width: 62%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   line-height: 1.4;
+  top: 77em;
+  position: absolute;
 }
 
 .about-us > h1 {
@@ -33,7 +39,7 @@
 }
 
 .about-us > p {
-  width: 800px;
+  max-width: 82%;
   font-weight: 300;
   text-align: center;
   font-size: 1.7em;
@@ -42,4 +48,32 @@
 
 .about-us > h2 {
   font-family: "Salsa";
+}
+
+@media (max-width: 768px) {
+
+  .about {
+    background-position-y: 13em;
+  }
+}
+
+@media (max-width: 375px) {
+  .about {
+    background-position-x: -7.2em;
+    background-position-y: 3em;
+    padding: 7.2em 0;
+  }
+  .about-us {
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .about-us > h1 {
+    font-size: 42px;
+  }
+
+  .about-us > p {
+    font-size: 1.4em;
+    max-width: 100%;
+  }
 }
