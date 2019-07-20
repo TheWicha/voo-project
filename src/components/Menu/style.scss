@@ -1,0 +1,23 @@
+.menu {
+  padding-top: 10rem;
+  background: black;
+  background-image: linear-gradient(to bottom, #161616 0, rgba(0, 0, 0, 0.5) 88.4%), url(../../images/tomato.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu-section-wrapper {
+  margin: 0 auto;
+}
+
+
+.menu-wrapper {
+  color: white;
+  justify-content: center;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
