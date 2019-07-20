@@ -3,7 +3,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 .header {
   background-size: cover;
@@ -14,9 +13,26 @@
   min-height: 60rem;
 }
 
-.zero-transition{
+.zero-transition {
   transition: none;
 }
 .one-transition {
   transition: opacity 1s;
+}
+
+@media (max-width: 411px) {
+  .header {
+    min-height: 52rem;
+  }
+}
+// @media (max-width: 375px) {
+//   .header {
+//     min-height: 42rem;
+//   }
+// }
+
+@media (max-width: 320px) {
+  .header {
+    min-height: 36rem;
+  }
 }

@@ -77,25 +77,34 @@
 }
 @media (max-width: 414px) {
   .about {
-    background-position-y: 13em;
+    background-position-y: 1em;
+    padding: 24em 0;
   }
-}
-@media (max-width: 375px) {
-  .about {
-    background-position-x: -32.2em;
-    background-position-y: 18em;
-    background-size: 43.3em;
-  }
+
   .about-us {
-    margin: 0 auto;
-    width: 80%;
+    top: 60em;
   }
-  .about-us > h1 {
-    font-size: 42px;
+
+  .about-us > img {
+    margin: 1em;
   }
 
   .about-us > p {
-    font-size: 1.4em;
+    font-size: 1.3em;
+}
+}
+
+@media(max-width:320px){
+  .about-us{
+    top: 44em;
+  }
+
+  .about-us > p {
     max-width: 100%;
+  }
+
+  .about{
+    padding: 21em 0;
+    background-position-x: -37.2em;
   }
 }

@@ -16,15 +16,40 @@
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .welcome {
-    width: 80%;
+    width: 73%;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+  .welcome {
+    width: 80%;
+    top: 4em;
+  }
+}
+
+@media (max-width: 411px) {
   .welcome {
     width: 90%;
+    top: 8em;
+    font-size: 2.8em;
+  }
+}
+@media(max-width: 375px){
+  .welcome {
+    top: 6em;
+  }
+}
+@media (max-width: 360px) {
+  .welcome {
+    top: 5em;
+  }
+}
+
+@media (max-width: 320px) {
+  .welcome {
+    font-size: 2.8em;
   }
 }
 
