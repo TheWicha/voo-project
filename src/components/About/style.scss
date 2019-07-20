@@ -10,9 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 
 .about-us > img {
   filter: none;
@@ -50,23 +48,47 @@
   font-family: "Salsa";
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .about {
+    background-position-x: -24.2em;
+    background-position-y: 8em;
+  }
+}
 
+@media (max-width: 950px) {
+  .about {
+    background-position-x: -31.2em;
+  }
+  .about-us {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-us > p {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    background-position-x: -35.2em;
+  }
+}
+@media (max-width: 414px) {
   .about {
     background-position-y: 13em;
   }
 }
-
 @media (max-width: 375px) {
   .about {
-    background-position-x: -7.2em;
-    background-position-y: 3em;
-    padding: 7.2em 0;
+    background-position-x: -32.2em;
+    background-position-y: 18em;
+    background-size: 43.3em;
   }
   .about-us {
     margin: 0 auto;
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.4);
   }
   .about-us > h1 {
     font-size: 42px;
