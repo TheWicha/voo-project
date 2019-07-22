@@ -36,3 +36,9 @@
     font-size: 0.9em;
   }
 }
+
+@media(max-width: 1140px){
+  .menu-box:nth-child(5) {
+    border-bottom: 1px solid;
+  }
+}

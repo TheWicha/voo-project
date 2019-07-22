@@ -43,30 +43,40 @@ class Header extends Component {
       const animatedHeader = document.querySelector('.header')
 
 
-      setTimeout(() => {        
-        animatedHeader.classList.remove('zero-transition') 
+      setTimeout(() => {
+        animatedHeader.classList.remove('zero-transition')
         animatedHeader.classList.add('one-transition')
         animatedHeader.style.opacity = 1;
       }, 1000)
     }
   }
-  componentWillUnmount() {
-    if (window.scrollY > 583) {
-      clearInterval(this.caruselInterval)
-      return
-    }
-  }
+
 
   renderHeaderSection = (currentImg) => {
-
-    return <section className='header' style={{ opacity: 0, backgroundImage: `linear-gradient(to bottom, rgba(22, 22, 22, 4.3) 0, rgba(255, 255, 255, -1) 48.4%), url(${currentImg})` }} />
+    const headerStyle = {
+      opacity: 0,
+      backgroundImage:
+        `linear-gradient(to bottom, 
+          rgba(22, 22, 22, 4.3) 0, 
+          rgba(255, 255, 255, -1) 48.4%), 
+          url(${currentImg})`
+    }
+    return <section className='header' style={headerStyle} />
   }
 
   render() {
     const { currentImg, imgTwo } = this.state
+    
+    const headerBack = {
+      backgroundImage:
+        `linear-gradient(to bottom, 
+          rgba(22, 22, 22, 4.3) 0, 
+          rgba(255, 255, 255, -1) 48.4%), 
+          url(${imgTwo})`
+    }
 
     return (
-      <div className='header-back' style={{ backgroundImage: `linear-gradient(to bottom, rgba(22, 22, 22, 4.3) 0, rgba(255, 255, 255, -1) 48.4%), url(${imgTwo})` }}>
+      <div className='header-back' style={headerBack}>
         {this.renderHeaderSection(currentImg)}
         <section className='header-welcome'>
           <div className='header-container'>
