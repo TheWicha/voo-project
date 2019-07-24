@@ -16,6 +16,7 @@ class Header extends Component {
   }
 
   componentDidMount() {
+
     this.caruselInterval = setInterval(() => {
       const animatedHeader = document.querySelector('.header')
 
@@ -36,6 +37,8 @@ class Header extends Component {
         return { currentIteration: currentIteration + 1, currentImg: backgrounds[currentIteration + 1].url, imgTwo: backgrounds[currentIteration].url }
       })
     }, 10000);
+
+
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -64,9 +67,14 @@ class Header extends Component {
     return <section className='header' style={headerStyle} />
   }
 
+  setRef(sectionName) {
+    return this.props.setRef(sectionName)
+  }
+
   render() {
     const { currentImg, imgTwo } = this.state
-    
+    const { activeIndex, isInMove } = this.props
+
     const headerBack = {
       backgroundImage:
         `linear-gradient(to bottom, 
@@ -76,15 +84,19 @@ class Header extends Component {
     }
 
     return (
-      <div className='header-back' style={headerBack}>
-        {this.renderHeaderSection(currentImg)}
-        <section className='header-welcome'>
-          <div className='header-container'>
-            <Navbar />
-            <Welcome />
+      <section id="home" className='header-section-wrapper' ref={this.setRef("home")}>
+        <div className='header-back'  style={headerBack}>
+          {this.renderHeaderSection(currentImg)}
+          <div className='header-welcome' >
+            <div className='header-container'>
+              <Navbar
+                activeIndex={activeIndex}
+                isInMove={isInMove} />
+              <Welcome />
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     )
   }
 }
