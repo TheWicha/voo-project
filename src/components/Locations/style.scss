@@ -1,3 +1,145 @@
-.locations{
-  padding: 30em;
+.locations {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 60em;
+  max-width: 1200px;
+}
+.locations-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.locations-logo-boxes-wrapper {
+  margin-top: 7em;
+  justify-content: space-between;
+  display: flex;
+}
+.location-boxes-wrapper {
+  height: 401px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations-logo-wrapper {
+  width: 31%;
+}
+
+.locations-header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.locations-logo > img {
+  filter: none;
+  margin-right: 0.7em;
+  width: auto;
+  height: 3.2em;
+}
+.locations-header > h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.locations-logo > h3 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+.locations-logo > h3 > span {
+  margin-left: 0.6em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.locations-header > p {
+  width: 50%;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.7em;
+  margin: 0 auto;
+}
+
+.map-container {
+  position: absolute;
+  width: 25%;
+  height: 26.6%;
+  top: 222em;
+  right: 69.5em;
+}
+
+.gm-svpc,
+.gmnoprint,
+.gm-control-active {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1150px) {
+  .map-container {
+    top: 271em;
+  }
+  .locations-logo {
+    margin-right: 33em;
+  }
+}
+
+@media (max-width: 950px) {
+  .locations-logo {
+    margin-right: 20em;
+  }
+}
+
+@media (max-width: 800px) {
+  .locations-header > p {
+    font-size: 1.5em;
+  }
+  .locations-logo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations-logo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .locations-header > p {
+    width: 91%;
+  }
+}
+@media (max-width: 470px) {
+}
+
+@media (max-width: 414px) {
+  .locations-header > div > img {
+    margin: 1em;
+  }
+
+  .locations-header > p {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 360px) {
+}
+@media (max-width: 320px) {
+  .locations-header > p {
+    max-width: 100%;
+  }
 }
