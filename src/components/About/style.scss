@@ -12,7 +12,13 @@
   align-items: center;
 }
 
-.about-us > img {
+.about-us > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-us > div > img {
   filter: none;
   margin: 2em;
 }
@@ -25,18 +31,19 @@
   align-items: center;
   flex-direction: column;
   line-height: 1.4;
-  top: 74em;
+  top: 78em;
+  left: 29em;
   position: absolute;
 }
 
-.about-us > h1 {
+.about-us > div > h1 {
   font-weight: 300;
   font-size: 48px;
   margin: 0;
   text-transform: uppercase;
 }
 
-.about-us > p {
+.about-us > div > p {
   max-width: 82%;
   font-weight: 300;
   text-align: center;
@@ -44,14 +51,27 @@
   margin: 0;
 }
 
-.about-us > h2 {
-  font-family: "Salsa";
+.about-us > div > p > span > a {
+  color: inherit;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 1400px) {
   .about {
     background-position-x: -24.2em;
     background-position-y: 8em;
+  }
+  .about-us {
+    left: 22em;
+  }
+}
+
+@media (max-width: 1050px) {
+  .about-us {
+    left: 17em;
   }
 }
 
@@ -60,13 +80,17 @@
     background-position-x: -31.2em;
   }
   .about-us {
-    width: 90%;
+    width: 86%;
+    left: 6.9em;
   }
 }
 
 @media (max-width: 800px) {
-  .about-us > p {
+  .about-us > div > p {
     font-size: 1.5em;
+  }
+  .about-us {
+    left: 5em;
   }
 }
 
@@ -75,6 +99,18 @@
     background-position-x: -35.2em;
   }
 }
+
+@media (max-width: 600px) {
+  .about-us {
+    left: 4em;
+  }
+}
+@media (max-width: 470px) {
+  .about-us {
+    left: 3em;
+  }
+}
+
 @media (max-width: 414px) {
   .about {
     background-position-y: 1em;
@@ -85,26 +121,48 @@
     top: 60em;
   }
 
-  .about-us > img {
+  .about-us > div > img {
     margin: 1em;
   }
 
-  .about-us > p {
+  .about-us > div > p {
     font-size: 1.3em;
+  }
 }
+@media (max-width: 360px) {
+  .about-us {
+    left: 2em;
+  }
 }
-
-@media(max-width:320px){
-  .about-us{
+@media (max-width: 320px) {
+  .about-us {
     top: 44em;
   }
 
-  .about-us > p {
+  .about-us > div > p {
     max-width: 100%;
   }
 
-  .about{
+  .about {
     padding: 21em 0;
     background-position-x: -37.2em;
+  }
+}
+
+.slide-bottom {
+  animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.hide {
+  opacity: 0;
+}
+
+@keyframes slide-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
