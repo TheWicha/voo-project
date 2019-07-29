@@ -37,8 +37,6 @@ class Header extends Component {
         return { currentIteration: currentIteration + 1, currentImg: backgrounds[currentIteration + 1].url, imgTwo: backgrounds[currentIteration].url }
       })
     }, 10000);
-
-
   }
 
   componentDidUpdate(prevProps, prevState) {
