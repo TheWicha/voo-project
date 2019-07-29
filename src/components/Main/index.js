@@ -14,19 +14,20 @@ class Main extends Component {
     this.state = {
       isInMove: false,
       activeIndex: 0,
+      startAboutAnimation: false,
     };
 
     this.handleColorChange = this.handleColorChange.bind(this);
     this.handleLinkChange = this.handleLinkChange.bind(this);
     this.sections = {};
     this.setRef = (sectionElement) => element => {
-    this.sections = { ...this.sections, [sectionElement]: element }
+      this.sections = { ...this.sections, [sectionElement]: element }
     };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleColorChange);
-    window.addEventListener('scroll', this.handleLinkChange);
+    window.addEventListener('scroll', this.handleColorChange, { passive: true });
+    window.addEventListener('scroll', this.handleLinkChange, { passive: true });
 
     $(document).ready(function () {
       $('a[href^="#"]').on('click', function (e) {
@@ -40,6 +41,7 @@ class Main extends Component {
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleColorChange);
+    window.removeEventListener('scroll', this.handleLinkChange);
   };
 
   handleColorChange() {
@@ -65,17 +67,21 @@ class Main extends Component {
 
 
     if (window.pageYOffset >= 0 && window.pageYOffset < homeHeight) {
+      if (window.pageYOffset > homeHeight / 3) {
+        return this.setState({ startAboutAnimation: true })
+      }
       return this.setState({ activeIndex: 0 })
     }
     if (window.pageYOffset >= homeHeight && window.pageYOffset < aboutHeight) {
-      return this.setState({ activeIndex: 1 })
+
+      return this.setState({ activeIndex: 1, })
     }
 
-    if (window.pageYOffset >= aboutHeight && window.pageYOffset < menuHeight) {
+    if (window.pageYOffset >= aboutHeight && window.pageYOffset < (menuHeight - 50)) {
       return this.setState({ activeIndex: 2 })
     }
 
-    if (window.pageYOffset >= menuHeight && window.pageYOffset < locationsHeight) {
+    if (window.pageYOffset > (menuHeight - 50) && window.pageYOffset < locationsHeight) {
       return this.setState({ activeIndex: 3 })
     }
 
@@ -84,7 +90,7 @@ class Main extends Component {
 
 
   render() {
-    const { isInMove, activeIndex } = this.state;
+    const { isInMove, activeIndex, startAboutAnimation } = this.state;
     return (
 
       <main className='full-page-wrapper'>
@@ -94,6 +100,7 @@ class Main extends Component {
           setRef={this.setRef}
         />
         <About
+          startAnimation={startAboutAnimation}
           setRef={this.setRef}
         />
         <Menu
