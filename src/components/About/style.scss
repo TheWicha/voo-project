@@ -5,7 +5,7 @@
   background-size: 48.3em;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  padding: 30em 0;
+  height: 61em;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -25,15 +25,15 @@
 
 .about-us {
   max-width: 1200px;
-  width: 60%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   line-height: 1.4;
-  top: 78em;
   left: 29em;
   position: absolute;
+  opacity: 0;
 }
 
 .about-us > div > h1 {
@@ -44,7 +44,7 @@
 }
 
 .about-us > div > p {
-  max-width: 82%;
+  max-width: 75%;
   font-weight: 300;
   text-align: center;
   font-size: 1.7em;
@@ -114,7 +114,6 @@
 @media (max-width: 414px) {
   .about {
     background-position-y: 1em;
-    padding: 24em 0;
   }
 
   .about-us {
@@ -144,17 +143,15 @@
   }
 
   .about {
-    padding: 21em 0;
     background-position-x: -37.2em;
   }
 }
 
 .slide-bottom {
   animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.3s;
 }
-.hide {
-  opacity: 0;
-}
+
 
 @keyframes slide-bottom {
   0% {
