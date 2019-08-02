@@ -1,4 +1,18 @@
+
+.box0{
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.box1{
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+          animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+}
+.box2{
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
+          animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
+}
 .location-box {
+  opacity: 0;
   width: 100%;
   height: 350px;
   background-color: white;
@@ -28,9 +42,12 @@
     transition: 0.3s;
     font-size: 1.2em;
   }
+
   &:hover .location-box-phone {
     animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    animation-delay: 0.5s;
   }
+
   &:hover button {
     transition: 0.3s;
     padding: 1em 2em;
@@ -71,6 +88,8 @@
   margin: 0.5em;
   margin-top: 0;
 }
+
+
 @keyframes shake-bottom {
   0%,
   100% {
@@ -102,5 +121,18 @@
   90% {
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
   }
 }

@@ -6,9 +6,11 @@ import propTypes from 'prop-types'
 class LocationBox extends Component {
 
   render() {
-    const { locationName, address, phone } = this.props
+    
+    const { locationName, address, phone, startAnimation, index} = this.props
+
     return (
-      <div className='location-box'>
+      <div className={startAnimation ? `location-box box${index}` : 'location-box'}>
         <img src={logo} alt='voo logo' />
         <h3>{locationName}</h3>
         <button href="#">Order Online</button>
