@@ -4,10 +4,13 @@ import img from '../../../../images/voo.png'
 
 function Logo(props) {
   return (
-    <div className="logo">
-      <img src={img} alt="Voo logo " />
-      <h1>Voo STREETFOOD</h1>
-    </div>
+    <a href="#home" className='home-logo'>
+      <div className="logo">
+        <img src={img} alt="Voo logo " />
+        <h1>Voo STREETFOOD</h1>
+      </div>
+    </a>
+
   )
 }
 
