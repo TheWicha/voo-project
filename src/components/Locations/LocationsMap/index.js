@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-
 import './style.scss'
 import locations from './locations';
 
@@ -12,9 +11,6 @@ class LocationsMap extends Component {
     return this.props.setRef(sectionName)
   }
 
-componentDidMount(){
-  document.addEventListener('touchstart', function (event) { event.preventDefault(); }, { passive: true })
-}
   render() {
     const mapStyles = {
       width: '100%',

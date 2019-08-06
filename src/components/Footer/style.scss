@@ -1,0 +1,162 @@
+.footer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #181a1e;
+  padding: 4em 0;
+}
+
+.footer-container {
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 66%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid;
+}
+
+.day-hr,
+.day-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-box {
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dotted;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.opening-hours h3 {
+  text-transform: uppercase;
+}
+
+.opening-hours {
+  padding: 5em 0;
+  width: 40%;
+}
+
+.social-list {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+
+.social-list > li {
+  transition: 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 0.25em;
+  color: white;
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 5px;
+  &:hover a {
+    color: white;
+  }
+}
+
+.footer-info {
+  color: white;
+  width: 66%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 4em 0;
+  & a {
+    color: white;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+}
+
+.footer-info-dev {
+  display: flex;
+  justify-content: space-between;
+
+  };
+  & p {
+    padding-bottom: 0.8em;
+  }
+}
+
+.footer-info-photo > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  margin: 0;
+    & a {
+    text-decoration: none;
+  }
+  & li {
+    padding-left: 5px;
+  } 
+}
+
+.social-list li:nth-child(1) {
+  margin-left: 0px;
+  &:hover {
+    background-color: #3b5998;
+  }
+}
+.social-list li:nth-child(2) {
+  &:hover {
+    background-color: #00aced;
+  }
+}
+.social-list li:nth-child(3) {
+  &:hover {
+    background-color: #f09433;
+  }
+}
+.social-list li:nth-child(4) {
+  &:hover {
+    background-color: #bd081c;
+  }
+}
+.social-list li:nth-child(5) {
+  &:hover {
+    background-color: #ff0000;
+  }
+}
+
+.social-list > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 750px) {
+  .opening-hours {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 640px) {
+  .opening-hours {
+    font-size: 1em;
+    width: 250px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-info-dev {
+    flex-wrap: wrap;
+  }
+}

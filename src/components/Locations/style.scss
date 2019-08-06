@@ -2,35 +2,47 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  height: 60em;
   max-width: 1200px;
 }
+
+.locations-header {
+  margin-top: 8.3em;
+}
+
 .locations-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .locations-logo-boxes-wrapper {
-  margin-top: 7em;
-  justify-content: space-between;
+  margin: 7em 0;
   display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .location-boxes-wrapper {
-  height: 401px;
-  width: 60%;
+  margin-top: 2em;
+  width: 66%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
 
 .locations-logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .locations-logo-wrapper {
-  width: 31%;
+  width: 63%;
 }
 
 .locations-header > div {
@@ -39,12 +51,14 @@
   align-items: center;
   flex-direction: row;
 }
+
 .locations-logo > img {
   filter: none;
   margin-right: 0.7em;
   width: auto;
   height: 3.2em;
 }
+
 .locations-header > h1 {
   display: flex;
   justify-content: center;
@@ -65,7 +79,7 @@
 }
 
 .locations-header > p {
-  width: 50%;
+  width: 76%;
   font-weight: 300;
   text-align: center;
   font-size: 1.7em;
@@ -73,73 +87,67 @@
 }
 
 .map-container {
-  position: absolute;
-  width: 25%;
-  height: 26.6%;
-  top: 222em;
-  right: 69.5em;
+  padding-bottom: 31%;
+  width: 100%;
+  height: 0;
+  position: relative;
 }
+
+//google map full screen and +/- icons
 
 .gm-svpc,
 .gmnoprint,
 .gm-control-active {
   display: none;
 }
+//-------------------------------------
 
-@media (max-width: 1400px) {
-}
-
-@media (max-width: 1150px) {
+@media (max-width: 1210px) {
   .map-container {
-    top: 271em;
+    padding-bottom: 24%;
   }
-  .locations-logo {
-    margin-right: 33em;
+  .locations-logo-boxes-wrapper {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .location-boxes-wrapper {
+    width: 80%;
+  }
+  .locations-logo-wrapper {
+    width: 76%;
   }
 }
 
 @media (max-width: 950px) {
-  .locations-logo {
-    margin-right: 20em;
+  .location-boxes-wrapper {
+    width: 95%;
+  }
+  .locations-logo-wrapper {
+    width: 92%;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 640px) {
+  .location-boxes-wrapper {
+    flex-wrap: wrap;
+    width: 250px;
+  }
+  .map-container {
+    padding-bottom: 46%;
+  }
+  .locations-logo-wrapper {
+    width: 92%;
+  }
   .locations-header > p {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
-  .locations-logo {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .locations-logo {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .locations-header > p {
-    width: 91%;
-  }
-}
-@media (max-width: 470px) {
 }
 
 @media (max-width: 414px) {
-  .locations-header > div > img {
-    margin: 1em;
-  }
-
-  .locations-header > p {
-    font-size: 1.3em;
-  }
-}
-@media (max-width: 360px) {
-}
-@media (max-width: 320px) {
-  .locations-header > p {
-    max-width: 100%;
+  .locations-logo > h3 {
+    font-size: 1.5em;
+    margin: 0;
   }
 }

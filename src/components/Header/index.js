@@ -3,6 +3,7 @@ import './style.scss'
 import Welcome from './Welcome'
 import Navbar from './Navbar';
 import backgrounds from './backgrounds';
+import MobileNavbar from './MobileNavbar';
 
 class Header extends Component {
   constructor(props) {
@@ -71,7 +72,7 @@ class Header extends Component {
 
   render() {
     const { currentImg, imgTwo } = this.state
-    const { activeIndex, isInMove } = this.props
+    const { activeIndex, isInMove, mobileActtive, handleMobiNavi, handleOpenMobiNavi } = this.props
 
     const headerBack = {
       backgroundImage:
@@ -83,10 +84,15 @@ class Header extends Component {
 
     return (
       <section id="home" className='header-section-wrapper' ref={this.setRef("home")}>
-        <div className='header-back'  style={headerBack}>
+        <div className='header-back' style={headerBack}>
           {this.renderHeaderSection(currentImg)}
           <div className='header-welcome' >
             <div className='header-container'>
+              <MobileNavbar
+                mobileActtive={mobileActtive}
+                handleMobiNavi={handleMobiNavi}
+                handleOpenMobiNavi={handleOpenMobiNavi}
+              />
               <Navbar
                 activeIndex={activeIndex}
                 isInMove={isInMove} />

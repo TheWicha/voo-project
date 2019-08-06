@@ -10,7 +10,7 @@ class About extends Component {
     this.title = 'Our Story'
     this.text = <span>
       Voo is a brick & mortar, quick service restaurant inspired by street vendors,
-                      carts & trucks from across the country & the globe. Check out either of our {<a href='#locations'>locations</a>}
+                      carts & trucks from across the country & the globe. Check out either of our {<a href='#locations' style={{paddingRight: '.25em'}}>locations</a>}
       for a quick bite or hang at bar for some of the best nightlife in Poland.
                 </span>
   }

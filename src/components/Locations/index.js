@@ -34,10 +34,15 @@ class Locations extends Component {
                   <img src={img} alt='voo logo' />
                   <h3>Voo <span>{this.title}</span></h3>
                 </div>
+                <div className='map-container'>
+                  <LocationsMap />
+                </div>
               </div>
               <div className='location-boxes-wrapper'>
                 {locations.map((location, i) =>
-                  <LocationBox 
+                  <LocationBox
+                    index={i}
+                    startAnimation={this.props.startAnimation}
                     key={location.id}
                     locationName={location.name}
                     address={location.address}
@@ -46,9 +51,6 @@ class Locations extends Component {
                 )}
               </div>
             </div>
-          </div>
-          <div className='map-container'>
-            <LocationsMap />
           </div>
         </div>
       </section>
