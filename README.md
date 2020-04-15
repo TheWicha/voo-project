@@ -1,4 +1,3 @@
-# Responsive-One-Pager
 # voo-project
 
   
