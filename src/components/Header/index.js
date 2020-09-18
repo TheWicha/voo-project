@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss'
+import './style.css'
 import Welcome from './Welcome'
 import Navbar from './Navbar';
 import backgrounds from './backgrounds';

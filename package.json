@@ -2,6 +2,10 @@
   "name": "voo",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "v14.11.0",
+    "npm": " 6.14.8"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
@@ -28,10 +32,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "engines": {
-    "node": "v14.11.0",
-    "npm": " 6.14.8"
   },
   "browserslist": {
     "production": [

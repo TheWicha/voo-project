@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss'
+import './style.css'
 import logo from '../../../images/voo.png'
 import propTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

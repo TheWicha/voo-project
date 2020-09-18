@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss'
+import './style.css'
 import OpeningHours from './OpeningHours';
 import Socials from './Socials';
 import FooterInfo from './FooterInfo';

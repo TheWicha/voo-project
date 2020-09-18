@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss'
+import './style.css'
 import LocationsMap from './LocationsMap';
 import img from '../../images/voo.png'
 import LocationBox from './LocationBox';

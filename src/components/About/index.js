@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss'
+import './style.css'
 import PageText from '../PageText';
 
 class About extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import './style.scss'
+import './style.css'
 import locations from './locations';
 
 

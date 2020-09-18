@@ -94,14 +94,14 @@
   position: relative;
 }
 
-//google map full screen and +/- icons
+
 
 .gm-svpc,
 .gmnoprint,
 .gm-control-active {
   display: none;
 }
-//-------------------------------------
+
 
 @media (max-width: 1210px) {
   .map-container {
